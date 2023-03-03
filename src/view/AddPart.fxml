@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddPart">
+   <children>
+      <Button layoutX="328.0" layoutY="446.0" mnemonicParsing="false" onAction="#onCancel" prefHeight="25.0" prefWidth="85.0" text="Cancel" />
+      <Label layoutX="38.0" layoutY="23.0" prefHeight="17.0" prefWidth="122.0" text="Add Part">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="inHouseRadio" layoutX="273.0" layoutY="32.0" mnemonicParsing="false" onAction="#onInHouseRadio" selected="true" text="In-House">
+         <toggleGroup>
+            <ToggleGroup fx:id="toggleRadio" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="outSourcedRadio" layoutX="525.0" layoutY="32.0" mnemonicParsing="false" onAction="#onOutSourcedRadio" text="Outsourced" toggleGroup="$toggleRadio" />
+      <Label fx:id="machIdCompanyName" layoutX="4.0" layoutY="382.0" prefHeight="25.0" prefWidth="226.0" text="MachineId">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <TextField fx:id="addPartId" editable="false" layoutX="115.0" layoutY="120.0" minHeight="-Infinity" minWidth="-Infinity" promptText="Auto Gen Disabled" />
+      <Label layoutX="6.0" layoutY="122.0" prefHeight="20.0" prefWidth="47.0" text="ID">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="6.0" layoutY="168.0" prefHeight="20.0" prefWidth="70.0" text="Name">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="5.0" layoutY="219.0" prefHeight="20.0" prefWidth="47.0" text="Inv">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="3.0" layoutY="271.0" prefHeight="20.0" prefWidth="70.0" text="Price/Cost">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="5.0" layoutY="329.0" prefHeight="20.0" prefWidth="47.0" text="Max">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="251.0" layoutY="329.0" text="Min">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="addPartName" layoutX="115.0" layoutY="163.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" />
+      <TextArea fx:id="addPartInv" layoutX="115.0" layoutY="214.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" />
+      <TextArea fx:id="addPartPriceCost" layoutX="115.0" layoutY="266.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" />
+      <TextArea fx:id="addPartMax" layoutX="53.0" layoutY="324.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" />
+      <TextArea fx:id="addPartMin" layoutX="293.0" layoutY="324.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" />
+      <TextArea fx:id="addPartMachineId" layoutX="237.0" layoutY="380.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" />
+      <Button fx:id="partSaveBtn" layoutX="222.0" layoutY="446.0" mnemonicParsing="false" onAction="#onPartSaveBtn" prefHeight="25.0" prefWidth="85.0" text="Save" />
+   </children>
+</AnchorPane>

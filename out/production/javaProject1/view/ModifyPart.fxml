@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ModifyPart">
+   <children>
+      <Button layoutX="212.0" layoutY="422.0" mnemonicParsing="false" onAction="#modifyPartCancelButton" prefHeight="25.0" prefWidth="207.0" text="Cancel" />
+      <Label layoutX="47.0" layoutY="22.0" text="Modify Part">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="modifyPartInHouseRadio" layoutX="234.0" layoutY="31.0" mnemonicParsing="false" onAction="#onModifyPartInHouseRadio" selected="true" text="In-House">
+         <toggleGroup>
+            <ToggleGroup fx:id="modifyRadioToggle" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="modifyPartOutsourcedRadio" layoutX="414.0" layoutY="31.0" mnemonicParsing="false" onAction="#onModifyPartOutsourcedRadio" text="Outsourced" toggleGroup="$modifyRadioToggle" />
+      <Label layoutX="19.0" layoutY="125.0" text="ID">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="19.0" layoutY="175.0" text="Name">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="19.0" layoutY="223.0" text="Inv">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="19.0" layoutY="263.0" text="Price/Cost">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="19.0" layoutY="306.0" text="Max">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="154.0" layoutY="306.0" text="Min">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="modifyPartId" editable="false" layoutX="94.0" layoutY="123.0" promptText="Auto Gen Disabled" />
+      <TextField fx:id="modifyPartName" layoutX="94.0" layoutY="173.0" />
+      <TextField fx:id="modifyPartInv" layoutX="94.0" layoutY="221.0" />
+      <TextField fx:id="modifyPartPriceCost" layoutX="94.0" layoutY="261.0" />
+      <TextField fx:id="modifyPartMax" layoutX="74.0" layoutY="302.0" prefHeight="25.0" prefWidth="40.0" />
+      <TextField fx:id="modifyPartMin" layoutX="212.0" layoutY="302.0" prefHeight="25.0" prefWidth="40.0" />
+      <TextField fx:id="modifyPartMachineId" layoutX="252.0" layoutY="352.0" />
+      <Label fx:id="machIdCompanyName" layoutX="16.0" layoutY="354.0" prefHeight="20.0" prefWidth="227.0" text="Machine Id">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="modifyPartSaveButton" layoutX="445.0" layoutY="422.0" mnemonicParsing="false" onAction="#onModifyPartSaveButton" prefHeight="25.0" prefWidth="50.0" text="Save" />
+   </children>
+</AnchorPane>
